@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('/nhi', async (req, res) => {
   const nhi = new NhiTools();
-  res.send({ nhi: await nhi.generateNhi()})
+  res.send({ nhi: nhi.generateNhi()})
 });
 
 app.listen(port, () => {
